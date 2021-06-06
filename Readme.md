@@ -119,6 +119,9 @@ namespace QuickSettings.Model.Components
 | SettingsModel | Root tag of all settings models. | title<br>width<br>height<br>resizeable - Default: false |
 | Tab | Container for all input tags. | title |
 | CheckBox | True/False input. | title<br>checked<br>id |
+| ComboBox | Item selection tag | id |
+| Item | ComboBox Item |  |
+| Group | GroupBox for settings. | title<br>horizontal - Default: false |
 | Label | Text label | font<br>size<br>style - (italic, normal or oblique)<br>weight - (Thin, ExtraLight, UltraLight, Light, Normal, Regular, Medium, DemiBold, SemiBold, Bold, ExtraBold, UltraBold, Black, Heavy, ExtraBlack, UltraBlack) |
 | RadioButton | Only one of RadioButtons in a Stack can be selected. | title<br>checked - Default: false<br>id |
 | Slider | Decimal number input | max<br>min<br>id |
