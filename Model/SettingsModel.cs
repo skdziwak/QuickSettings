@@ -17,10 +17,10 @@ namespace QuickSettings.Model
         [ElementProperty("title")]
         public string Title { get; set; }
 
-        [ElementProperty("width")]
+        [ElementProperty("width", "Default: 800")]
         public string WidthStr { set => Width = int.Parse(value); }
         
-        [ElementProperty("height")]
+        [ElementProperty("height", "Default: 600")]
         public string HeightStr { set => Width = int.Parse(value); }
 
         [ElementProperty("resizeable", "Default: false")]

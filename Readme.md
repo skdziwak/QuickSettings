@@ -116,7 +116,7 @@ namespace QuickSettings.Model.Components
 ## Built-in XML tags
 | Tag | Description | Attributes |
 | --- | ----------- | ---------- |
-| SettingsModel | Root tag of all settings models. | title<br>width<br>height<br>resizeable - Default: false |
+| SettingsModel | Root tag of all settings models. | title<br>width - Default: 800<br>height - Default: 600<br>resizeable - Default: false |
 | Tab | Container for all input tags. | title |
 | CheckBox | True/False input. | title<br>checked<br>id |
 | ComboBox | Item selection tag | id |
