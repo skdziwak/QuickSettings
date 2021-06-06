@@ -49,26 +49,45 @@ namespace QuickSettings.Model.Components
                 }
                 grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(size, type)});
             }
-            foreach(string row in rows)
+            if (rows.Length == 1 && rows[0] == "auto")
             {
-                double size;
-                GridUnitType type;
-                if (row.EndsWith("*"))
+                if (Elements != null)
                 {
-                    size = double.Parse(row.Substring(0, row.Length - 1), CultureInfo.InvariantCulture);
-                    type = GridUnitType.Star;
-                } else
-                {
-                    size = double.Parse(row, CultureInfo.InvariantCulture);
-                    type = GridUnitType.Pixel;
+                    int r = (int)Math.Ceiling(((double)Elements.Count) / ((double)columns.Length));
+                    for (int i = 0; i < r; i++)
+                    {
+                        grid.RowDefinitions.Add(new RowDefinition());
+                    }
                 }
-                grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(size, type)});
             }
-            foreach(Component component in (from c in Elements where c is Component select (Component)c)) {
-                Grid.SetColumn(component.UIElement, index % columns.Length);
-                Grid.SetRow(component.UIElement, index / columns.Length);
-                grid.Children.Add(component.UIElement);
-                index++;
+            else
+            {
+
+                foreach(string row in rows)
+                {
+                    double size;
+                    GridUnitType type;
+                    if (row.EndsWith("*"))
+                    {
+                        size = double.Parse(row.Substring(0, row.Length - 1), CultureInfo.InvariantCulture);
+                        type = GridUnitType.Star;
+                    } else
+                    {
+                        size = double.Parse(row, CultureInfo.InvariantCulture);
+                        type = GridUnitType.Pixel;
+                    }
+                    grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(size, type)});
+                }
+            }
+            if (Elements != null)
+            {
+                foreach (Component component in (from c in Elements where c is Component select (Component)c))
+                {
+                    Grid.SetColumn(component.UIElement, index % columns.Length);
+                    Grid.SetRow(component.UIElement, index / columns.Length);
+                    grid.Children.Add(component.UIElement);
+                    index++;
+                }
             }
         }
     }

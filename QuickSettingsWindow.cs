@@ -15,6 +15,7 @@ namespace QuickSettings
         public SettingsModel model;
         public SettingsModel Model { get => model; }
 
+        private ScrollViewer scrollViewer;
         private StackPanel stackPanel;
         private ListView listView;
         
@@ -49,10 +50,13 @@ namespace QuickSettings
             Grid.SetColumn(listView, 0);
             grid.Children.Add(listView);
 
+            scrollViewer = new ScrollViewer();
+            Grid.SetColumn(scrollViewer, 1);
+            grid.Children.Add(scrollViewer);
+
             stackPanel = new StackPanel();
             stackPanel.Margin = new Thickness(5, 0, 5, 0);
-            Grid.SetColumn(stackPanel, 1);
-            grid.Children.Add(stackPanel);
+            scrollViewer.Content = stackPanel;
             
 
         }
