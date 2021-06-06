@@ -121,7 +121,7 @@ namespace QuickSettings.Model.Components
 | CheckBox | True/False input. | title<br>checked<br>id |
 | ComboBox | Item selection tag | id |
 | Item | ComboBox Item |  |
-| Grid | Grid for other components | rows - Format: "150:0.7*:0.3*"<br>columns - Format: "150:0.7*:0.3*" |
+| Grid | Grid for other components | rows - Format: "150:0.7*:0.3*" or "auto"<br>columns - Format: "150:0.7*:0.3*" |
 | Group | GroupBox for settings. | title<br>horizontal - Default: false |
 | Label | Text label | font<br>size<br>style - (italic, normal or oblique)<br>weight - (Thin, ExtraLight, UltraLight, Light, Normal, Regular, Medium, DemiBold, SemiBold, Bold, ExtraBold, UltraBold, Black, Heavy, ExtraBlack, UltraBlack) |
 | RadioButton | Only one of RadioButtons in a Stack can be selected. | title<br>checked - Default: false<br>id |

@@ -17,7 +17,7 @@ namespace QuickSettings.Model.Components
         private int index;
         private Grid grid;
 
-        [ElementProperty("rows", "Format: \"150:0.7*:0.3*\"")]
+        [ElementProperty("rows", "Format: \"150:0.7*:0.3*\" or \"auto\"")]
         public string Rows { set => rows = value.Split(':'); }
         [ElementProperty("columns", "Format: \"150:0.7*:0.3*\"")]
         public string Columns { set => columns = value.Split(':'); }
