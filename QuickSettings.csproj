@@ -52,6 +52,7 @@
     <Compile Include="Model\Components\CheckBoxComponent.cs" />
     <Compile Include="Model\Components\ComboBoxComponent.cs" />
     <Compile Include="Model\Components\ComboBoxItem.cs" />
+    <Compile Include="Model\Components\GridComponent.cs" />
     <Compile Include="Model\Components\GroupBoxComponent.cs" />
     <Compile Include="Model\Components\LabelComponent.cs" />
     <Compile Include="Model\Components\RadioButtonComponent.cs" />
